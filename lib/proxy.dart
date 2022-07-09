@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'dart:math';
 
-import 'package:kaze/protocol_structs.dart';
-import 'package:kaze/src/client_map.dart';
-import 'package:kaze/src/constants.dart';
+import 'package:kaze_proxy/protocol_structs.dart';
+import 'package:kaze_proxy/src/client_map.dart';
+import 'package:kaze_proxy/src/constants.dart';
 import 'package:udp/udp.dart';
 
 import 'src/utils.dart';

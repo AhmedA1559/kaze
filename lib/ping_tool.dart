@@ -1,9 +1,8 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:encode_endian/encode_endian.dart';
-import 'package:kaze/src/constants.dart';
-import 'package:kaze/src/timeout_exception.dart';
+import 'package:kaze_proxy/src/constants.dart';
+import 'package:kaze_proxy/src/timeout_exception.dart';
 import 'package:udp/udp.dart';
 
 import 'protocol_structs.dart';
@@ -30,8 +29,8 @@ class PingTool {
     builder.addByte(Constants.unconnectedPingId);
     builder.add(Constants.empty8Bytes);
     builder.add(Constants.unconnectedMagic);
-    builder.add(encodeEndian(Random.secure().nextInt(pow(2, 32) as int), 4));
-    builder.add(encodeEndian(Random.secure().nextInt(pow(2, 32) as int), 4));
+    builder.add(Utils.encodeEndian(Random.secure().nextInt(pow(2, 32) as int), 4));
+    builder.add(Utils.encodeEndian(Random.secure().nextInt(pow(2, 32) as int), 4));
 
     return builder.toBytes();
   }

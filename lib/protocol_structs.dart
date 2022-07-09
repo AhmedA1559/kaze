@@ -3,9 +3,8 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:encode_endian/base.dart';
-import 'package:encode_endian/encode_endian.dart';
-import 'package:kaze/src/constants.dart';
+import 'package:kaze_proxy/src/constants.dart';
+import 'package:kaze_proxy/src/utils.dart';
 
 class UnconnectedPing {
   static final UnconnectedPing offlinePong = UnconnectedPing(
@@ -45,7 +44,7 @@ class UnconnectedPing {
     builder.add(id);
     builder.add(magic);
 
-    builder.add(encodeEndian(pongBytes.length, 2,
+    builder.add(Utils.encodeEndian(pongBytes.length, 2,
         endianType:
             EndianType.bigEndian)); // not even going to bother with this
 

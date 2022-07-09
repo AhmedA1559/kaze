@@ -1,5 +1,5 @@
-name: kaze
-description: A simple command-line application.
+name: kaze_proxy
+description: A proxy library for connecting to Minecraft servers.
 version: 1.0.0
 # homepage: https://www.example.com
 
@@ -7,8 +7,6 @@ environment:
   sdk: '>=2.14.4 <3.0.0'
 
 dependencies:
-  encode_endian:
-    path: E:/encode-endian
   isolate: ^2.1.1
   udp: ^5.0.1
   logger: ^1.1.0
